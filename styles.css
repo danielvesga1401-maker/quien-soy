@@ -27,7 +27,7 @@ nav {
 }
 
 .nombre-nav strong {
-  font-weight: 700; /* negrilla para el primer nombre */
+  font-weight: bolder; /* negrilla para el primer nombre */
 }
 
 .enlaces-nav {
@@ -69,14 +69,16 @@ main {
 
 .imagen-inicio {
   float: left; /* la imagen flota a la izquierda */
-  width: 45%; /* ocupa el 45% del ancho */
+  width: 27%; /* ocupa el 45% del ancho */
   text-align: center; /* centra la imagen dentro del contenedor */
   padding-top: 20px; /* baja un poco la imagen */
+  margin-left: 400px;
 }
 
 .imagen-inicio img {
   width: 100%; /* la imagen ocupa todo el ancho de su contenedor */
   max-width: 400px; /* pero no más de 380px */
+  
 }
 
 .texto-inicio {
@@ -152,7 +154,7 @@ main {
 /*SECCIÓN 3 — PROYECTOS*/
 .proyectos {
   background: #f2f2f2; /* fondo gris claro */
-  padding: 80px 60px; /* espacio interno */
+  padding: 30px 60px; /* espacio interno */
   overflow: hidden; /* contiene los floats de las tarjetas */
 }
 
