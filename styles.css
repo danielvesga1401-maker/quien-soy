@@ -1,267 +1,372 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-*{
-    margin:0; /* elimina márgenes automáticos */
-    padding:0; /* elimina rellenos automáticos */
-    box-sizing:border-box; /* incluye padding y borde dentro del tamaño */
+html, body {
+    height: 100vh;
+    overflow: auto;
+    font-family: "Segoe UI", "Helvetica Neue", sans-serif;
+}
+
+nav {
+    background: #2c2c2c;
+    padding: 10px 40px 10px;
+    overflow: hidden;
+}
+
+.nombre-nav {
+    margin-left: 15px;
+    float: left;
+    color: white;
+    font-size: 30px;
+    font-weight: 300;
+    line-height: 1.6;
+}
+
+.nombre-nav strong {
+    font-weight: 700;
+}
+
+.enlaces-nav {
+    margin-right: 35px;
+    float: right;
+    line-height: 1.6;
+    margin-top: 5px;
+}
+
+.enlaces-nav a {
+    color: #cccccc;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 20px;
+    letter-spacing: 0.5px;
+    transition: color 0.2s;
+}
+
+.enlaces-nav a:hover,
+.enlaces-nav a.activo {
+    color: white;
+    font-weight: 600;
 }
 
 
-body{
-    font-family: "Segoe UI", sans-serif; /* fuente general */
+main {
+    height: calc(100vh - 40px);
+    overflow-y: auto;
+}
+
+.inicio {
+    background: #ffffff;
+    padding: 5px 15px 0px 5px;
+    overflow: hidden;
+    min-height: 420px;
+    max-width: 1115px;
+    margin: 0 auto;
+}
+
+.imagen-inicio {
+    float: left;
+    width: 60%;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.imagen-inicio img {
+    width: 100%;
+    max-width: 480px;
+}
+
+.texto-inicio {
+    float: right;
+    width: 40%;
+    padding-top: 40px;
+}
+
+.texto-inicio h1 {
+    font-size: 52px;
+    font-weight: 700;
+    color: #f77124;
+    margin-bottom: 10px;
+    line-height: 1.1;
+}
+
+.texto-inicio p {
+    font-size: 19px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.boton-rojo-arriba {
+    background: #f37a34;
+    color: white;
+    border: none;
+    padding: 8px 8px;
+    font-size: 22px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.boton-rojo-arriba:hover {
+    background: #e75b0a;
+}
+
+.boton-rojo {
+    background: #f37a34;
+    color: white;
+    border: none;
+    padding: 8px 8px;
+    font-size: 18px;
+    font-weight: 600;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.2s;
+}
+
+.boton-rojo:hover {
+    background: #e75b0a;
+}
+
+.quien-soy {
+    background: #f37a34;
+    padding: 13px 60px 20px;
+    text-align: center;
+}
+
+.foto-perfil {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 6px solid white;
+    margin: 0 auto 18px auto;
+    object-fit: cover;
+}
+
+.quien-soy p {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+    font-weight: bold;
+    max-width: 800px;
+    margin: 0 auto 10px auto;
+}
+
+.proyectos {
+    background: #f2f2f2;
+    padding: 20px 56px;
+    overflow: hidden;
+}
+
+.proyectos h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #333;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.contenedor-tarjetas {
+    overflow: hidden;
+}
+
+.tarjeta {
+    float: left;
+    width: 23.5%;
+    margin-right: 2%;
+    background: white;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.tarjeta:last-child {
+    margin-right: 0;
+}
+
+.tarjeta img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.cuerpo-tarjeta {
+    padding: 20px 16px;
+}
+
+.cuerpo-tarjeta h3 {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 12px;
+}
+
+.cuerpo-tarjeta p {
+    font-size: 15px;
+    color: #777;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+footer {
+    background: #2c2c2c;
+    color: #aaa;
+    font-size: 18px;
+    padding: 20px 30px 33px;
+    text-align: right;
+}
+
+.footer {
+    margin-right: 40px;
 }
 
 
-
-
-/* Barra superior */
-nav{
-    background:#2c2c2c; /* color oscuro de fondo */
-    color:white; /* texto blanco */
-    padding:15px 40px; /* espacio interno */
-    display:flex; /* activa flexbox */
-    justify-content:space-between; /* separa izquierda y derecha */
-    align-items:center; /* centra verticalmente */
-    flex-wrap:wrap; /* permite salto de línea */
-}
-
-/* Nombre del navbar */
-.nombre-nav{
-    font-size:28px; /* tamaño texto */
-}
-
-/* Contenedor enlaces */
-.enlaces-nav{
-    display:flex; /* enlaces en fila */
-    gap:20px; /* espacio entre enlaces */
-}
-
-/* Cada enlace */
-.enlaces-nav a{
-    color:#ccc; /* gris claro */
-    text-decoration:none; /* sin subrayado */
-    font-size:18px; /* tamaño texto */
-}
-
-/* Hover enlaces */
-.enlaces-nav a:hover{
-    color:white; /* cambia a blanco */
-}
-
-
-/* ===========================
-   SECCIÓN INICIO
-=========================== */
-
-/* Contenedor principal */
-.inicio{
-    display:flex; /* imagen y texto lado a lado */
-    align-items:center; /* centra verticalmente */
-    justify-content:center; /* centra horizontalmente */
-    gap:40px; /* separación entre bloques */
-    padding:60px 40px; /* espacio interno */
-    flex-wrap:wrap; /* en móvil baja elementos */
-}
-
-/* Imagen principal */
-.imagen-inicio img{
-    width:100%; /* ocupa ancho disponible */
-    max-width:450px; /* máximo ancho */
-    height:auto; /* conserva proporción */
-}
-
-/* Caja del texto */
-.texto-inicio{
-    max-width:600px; /* ancho máximo */
-}
-
-/* Título principal */
-.texto-inicio h1{
-    font-size:50px; /* tamaño grande */
-    color:#e74c3c; /* rojo */
-    margin-bottom:20px; /* espacio abajo */
-}
-
-/* Párrafo principal */
-.texto-inicio p{
-    font-size:22px; /* tamaño texto */
-    color:#555; /* gris */
-    line-height:1.6; /* separación líneas */
-    margin-bottom:25px; /* espacio inferior */
-}
-
-
-/* ===========================
-   BOTÓN
-=========================== */
-
-/* Botón rojo */
-.boton-rojo{
-    background:#e74c3c; /* fondo rojo */
-    color:white; /* texto blanco */
-    padding:12px 20px; /* espacio interno */
-    text-decoration:none; /* quita subrayado */
-    border-radius:5px; /* bordes redondos */
-    display:inline-block; /* permite padding correcto */
-    margin-top:auto; /* empuja botón hacia abajo */
-}
-
-/* Hover botón */
-.boton-rojo:hover{
-    background:#c0392b; /* rojo más oscuro */
-}
-
-
-/* ===========================
-   QUIÉN SOY
-=========================== */
-
-/* Sección roja */
-.quien-soy{
-    background:#e74c3c; /* fondo rojo */
-    color:white; /* texto blanco */
-    text-align:center; /* centra contenido */
-    padding:50px 20px; /* espacio interno */
-}
-
-/* Imagen circular */
-.foto-perfil{
-    width:180px; /* ancho */
-    height:180px; /* alto */
-    border-radius:50%; /* forma circular */
-    border:5px solid white; /* borde blanco */
-    object-fit:cover; /* recorta imagen */
-    margin-bottom:20px; /* espacio abajo */
-}
-
-/* Texto sección */
-.quien-soy p{
-    font-size:26px; /* tamaño texto */
-    max-width:900px; /* ancho máximo */
-    margin:auto; /* centra horizontalmente */
-    line-height:1.6; /* separación líneas */
-}
-
-
-/* ===========================
-   PROYECTOS
-=========================== */
-
-/* Fondo sección */
-.proyectos{
-    background:#f2f2f2; /* gris claro */
-    padding:60px 30px; /* espacio interno */
-}
-
-/* Título */
-.proyectos h2{
-    text-align:center; /* centrado */
-    font-size:40px; /* tamaño grande */
-    margin-bottom:40px; /* espacio abajo */
-}
-
-/* Contenedor tarjetas */
-.contenedor-tarjetas{
-    display:grid; /* activa grid */
-    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-    /* columnas automáticas responsivas */
-    gap:25px; /* espacio entre tarjetas */
-}
-
-/* Tarjeta individual */
-.tarjeta{
-    background:white; /* fondo blanco */
-    border-radius:10px; /* bordes redondos */
-    overflow:hidden; /* recorta contenido */
-    box-shadow:0 4px 10px rgba(0,0,0,0.1); /* sombra */
-
-    display:flex; /* activa flexbox */
-    flex-direction:column; /* contenido vertical */
-    height:100%; /* misma altura posible */
-}
-
-/* Imagen tarjeta */
-.tarjeta img{
-    width:100%; /* ocupa todo ancho */
-    height:220px; /* altura fija */
-    object-fit:cover; /* recorta imagen */
-}
-
-/* Contenido interno */
-.cuerpo-tarjeta{
-    padding:20px; /* espacio interno */
-    display:flex; /* flexbox interno */
-    flex-direction:column; /* contenido vertical */
-    flex-grow:1; /* ocupa espacio restante */
-}
-
-/* Título tarjeta */
-.cuerpo-tarjeta h3{
-    font-size:24px; /* tamaño texto */
-    margin-bottom:10px; /* separación */
-}
-
-/* Texto tarjeta */
-.cuerpo-tarjeta p{
-    font-size:18px; /* tamaño texto */
-    color:#666; /* gris */
-    margin-bottom:20px; /* espacio inferior */
-}
-
-
-
-
-/* Pie página */
-footer{
-    background:#2c2c2c; /* fondo oscuro */
-    color:white; /* texto blanco */
-    text-align:right; /* centra texto */
-    padding:25px; /* espacio interno */
-
-}
-
-
-
-
-/* Cuando pantalla sea menor o igual a 768px */
-@media(max-width:768px){
-
-    /* Navbar vertical */
-    nav{
-        flex-direction:column; /* elementos uno debajo del otro */
-        gap:15px; /* separación */
-        text-align:center; /* centra texto */
+@media (max-width: 1115px) {
+    .inicio {
+        max-width: 100%;
+        padding: 5px 15px 0px 15px;
     }
+}
 
-    /* Links verticales */
-    .enlaces-nav{
-        flex-direction:column; /* columna */
-        gap:10px; /* separación */
+@media (max-width: 1024px) {
+    .imagen-inicio {
+        width: 50%;
     }
-
-    /* Título más pequeño */
-    .texto-inicio h1{
-        font-size:36px; /* reduce tamaño */
-        text-align:center; /* centra */
+    .texto-inicio {
+        width: 50%;
+        padding-top: 20px;
     }
-
-    /* Texto más pequeño */
-    .texto-inicio p{
-        font-size:18px; /* reduce tamaño */
-        text-align:center; /* centra */
+    .texto-inicio h1 {
+        font-size: 38px;
     }
-
-    /* Caja texto centrada */
-    .texto-inicio{
-        text-align:center; /* centra contenido */
+    .texto-inicio p {
+        font-size: 16px;
     }
-
-    /* Texto sección rojo más pequeño */
-    .quien-soy p{
-        font-size:20px; /* reduce tamaño */
+    .tarjeta {
+        width: 48%;
+        margin-right: 2%;
+        margin-bottom: 20px;
     }
+    .tarjeta:nth-child(even) {
+        margin-right: 0;
+    }
+}
 
-    
-    .proyectos h2{
-        font-size:32px; /* reduce tamaño */
+@media (max-width: 900px) {
+    .inicio {
+        padding: 30px 20px;
+        text-align: center;
+    }
+    .imagen-inicio {
+        float: none;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    .imagen-inicio img {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+    .texto-inicio {
+        float: none;
+        width: 100%;
+        padding-top: 0;
+    }
+    .texto-inicio h1 {
+        margin-left: 0;
+        font-size: 34px;
+    }
+    .texto-inicio p {
+        margin-left: 0;
+        font-size: 16px;
+    }
+    .boton-rojo-arriba {
+        margin-left: 0;
+        margin-top: 0;
+    }
+    footer, .footer {
+        text-align: center;
+        margin-right: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    nav {
+        text-align: center;
+        padding: 10px 20px;
+    }
+    .nombre-nav {
+        float: none;
+        margin-left: 0;
+        display: block;
+    }
+    .enlaces-nav {
+        float: none;
+        margin-right: 0;
+        display: block;
+    }
+    .enlaces-nav a {
+        display: inline-block;
+        margin: 0 10px;
+        font-size: 18px;
+    }
+    .quien-soy {
+        padding: 20px;
+    }
+    .quien-soy p {
+        font-size: 20px;
+    }
+    .proyectos {
+        padding: 20px;
+    }
+    .proyectos h2 {
+        font-size: 36px;
+    }
+    .tarjeta {
+        width: 100%;
+        float: none;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+    .tarjeta img {
+        height: 200px;
+    }
+    footer {
+        text-align: center;
+        padding: 20px;
+    }
+    .footer {
+        margin-right: 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .texto-inicio h1 {
+        font-size: 28px;
+    }
+    .enlaces-nav a {
+        font-size: 14px;
+        margin: 0 8px;
+    }
+    .nombre-nav {
+        font-size: 24px;
+    }
+    .boton-rojo-arriba {
+        font-size: 18px;
+        padding: 6px 12px;
+    }
+    .tarjeta img {
+        height: 180px;
+    }
+    footer {
+        padding: 12px 15px;
+    }
+    .footer {
+        font-size: 12px;
     }
 }
