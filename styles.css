@@ -87,7 +87,7 @@ main {
 .texto-inicio h1 {
     font-size: 52px;
     font-weight: 700;
-    color: #f77124;
+    color: #2467f7;
     margin-bottom: 10px;
     line-height: 1.1;
 }
@@ -100,7 +100,7 @@ main {
 }
 
 .boton-rojo-arriba {
-    background: #f37a34;
+    background: #348df3;
     color: white;
     border: none;
     padding: 8px 8px;
@@ -112,11 +112,11 @@ main {
 }
 
 .boton-rojo-arriba:hover {
-    background: #e75b0a;
+    background: #0a8fe7;
 }
 
 .boton-rojo {
-    background: #f37a34;
+    background: #15abe6;
     color: white;
     border: none;
     padding: 8px 8px;
@@ -129,11 +129,11 @@ main {
 }
 
 .boton-rojo:hover {
-    background: #e75b0a;
+    background: #0a7ce7;
 }
 
 .quien-soy {
-    background: #f37a34;
+    background: #3487f3;
     padding: 13px 60px 20px;
     text-align: center;
 }
